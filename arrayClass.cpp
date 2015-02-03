@@ -33,7 +33,7 @@ int &array::operator [](size_t index) const {return arr[index];}
 array &array::operator +=(int val) {
 	checkCapacity();
 	arr[size] = val;
-	this->size++; //is a 'this' required here?
+	this->size++;
 	return *this;
 }
 

@@ -5,19 +5,27 @@ using namespace std;
 
 int main(){
 
-    array myarray, array2;
-    myarray[1]=1;
-    myarray.sizerUpper();
-    myarray[5]=24;
-    myarray.sizerUpper();
-    array2+=5;
-    array2+=6;
-    cout << myarray[1] << ", " << array2[5]<<" "<<array2[0]<<" "<<array2[1]<<endl;
-    if(array2==myarray)cout <<"equal"<<endl;
-    if(array2!=myarray)cout <<"not equal"<<endl;
-    cout <<myarray.getSize() <<" "<<array2.getSize()<<endl;
-    array2=myarray;
-    if(array2==myarray)cout <<"equal"<<endl;
-    if(array2!=myarray)cout <<"not equal"<<endl;
+    array customArray1, customArray2; //creating 2 custom arrays
+    customArray1[1]=1; // populating indexes in the arrays
+    customArray1.sizerUpper(); //increase counted size of array
+    customArray1[5]=24;
+    customArray1.sizerUpper();
+    customArray2+=5;
+    customArray2+=6;
+
+    cout << "customArray1 contents: " << customArray1[1] << ", " << customArray1[5]<<"\n"
+        << "customArray2 contents: "<<customArray2[0]<<", "<<customArray2[1]<<endl;
+
+    cout << "customArray1 and customArray2 are ";
+    if(customArray2==customArray1)cout <<"equal"<<endl; //testing conditional operators
+    if(customArray2!=customArray1)cout <<"not equal"<<endl;
+
+    cout << "customArray1 size: " << customArray1.getSize() <<"\n"
+        << "customArray2 size: " <<customArray2.getSize()<<endl;
+
+    customArray2=customArray1; //testing assignment operator
+    cout << "After setting customArray2=customArray1 the arrays are now ... ";
+    if(customArray2==customArray1)cout <<"equal"<<endl;
+    if(customArray2!=customArray1)cout <<"not equal"<<endl;
     return 0;
 }
